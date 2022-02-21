@@ -1,0 +1,61 @@
+<div class="container">
+
+    <div class="innerContainer">
+        <div class="login" >
+            <h3>Memeber Login</h3>
+            <form [formGroup]="login" (ngSubmit)="submitLogin()">
+                <input type="text" name="loginEmail" id="" placeholder="Email" formControlName="loginEmail" required>
+                
+                <!-- <div *ngIf="loginEmail.invalid && (loginEmail.dirty || loginEmail.touched)" class="errMessage">
+                    <div *ngIf="loginEmail.errors?['required']">
+                      <span style="color: red;">Please Enter Email.</span>
+                    </div>
+                    <div *ngIf="loginEmail.errors?['minlength']">
+                      <span style="color: red;">Email requied atleast 3 characters.</span>
+                    </div>
+                    <div *ngIf="loginEmail.errors?['maxlength']">
+                      <span style="color: red;"> Email requied only 30 characters.</span>
+                    </div>
+                    <div *ngIf="loginEmail.errors?['pattern']">
+                      <span style="color: red;">Only characters are allowed.</span>
+                    </div>
+                </div> -->
+               
+
+                <input type="password" name="loginPassword" id="" placeholder="Password" formControlName="loginPassword">
+
+                <!-- <div *ngIf="loginPassword.invalid && (loginPassword.dirty || loginPassword.touched)" class="errMessage">
+                    <div *ngIf="loginPassword.errors['required']">
+                    <span>Enter a valid password</span>
+                    </div>
+                </div> -->
+
+                <button type="submit" [disabled]="login.invalid">Sign in</button>
+                
+                <div class="check">
+                    <div><input type="checkbox"> Remember me</div>
+                    <div><a href="#">Forget Password?</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="innerContainer">
+        <div class="register">
+            <h3>Register</h3>
+            <form>
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Username">
+                <input type="text" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm Password">
+                <button>Submit</button>
+
+                <!-- <input type="radio" name="select" id="" value="love">{{'All is('+love+')'}}
+                <input type="radio" name="select" id="" value="kiss">{{kiss}}
+                <input type="radio" name="select" id="" value="win">{{win}} -->
+            </form>
+        </div>
+    </div>
+   
+</div>
